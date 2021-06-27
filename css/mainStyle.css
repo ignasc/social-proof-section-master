@@ -1,0 +1,229 @@
+html {
+  font-family: 'Spartan', sans-serif;
+
+  background: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw, 100vw;
+}
+
+body {
+  max-width: 375px;
+  min-width: 200px;
+  margin: auto;
+}
+
+header {
+  margin: 20px;
+}
+header > * { /*Common text properties*/
+  text-align: center;
+}
+header > h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  margin-bottom: 1rem;
+}
+header > p {
+  font-size: 1em;
+  font-weight: 500;
+  color: hsl(303, 10%, 53%);
+  margin-top: 1rem;
+}
+
+.ratingCard {
+  background-color: #F7F2F8;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+.ratingCard > p {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  text-align: center;
+  margin: 0.8em auto auto auto;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.rating > img {
+  margin: auto 5px auto 5px;
+}
+
+.clientCard {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+
+  color: hsl(0, 0%, 100%);
+}
+.clientCard > div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 30% 70%;
+
+  margin-bottom: 1em;
+}
+.clientCard h1 {
+  font-weight: 700;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.clientCard h2 {
+  color: hsl(333, 80%, 67%);
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.clientCard h1, .clientCard h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1em;
+  
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.clientCard > p {
+  margin: 1em auto 1em auto;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.clientPortrait {
+  width: 45px;
+  border-radius: 50%;
+  margin: auto;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  /*DESKTOP*/
+  @media screen and (min-width: 1000px) {
+    html {
+      background: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+      background-position: left top, right bottom;
+      background-repeat: no-repeat, no-repeat;
+      min-height: 100vh;
+    }
+    body {
+      max-width: 1000px;
+      max-height: 800px;
+      margin: 10vh auto 10vh auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+    }
+    header {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      margin: auto 0 auto 10px;
+    }
+    header > * {
+      text-align: left;
+    }
+    header > h1 {
+      padding-right: 150px;
+    }
+    header > p {
+      padding-right: 50px;
+    }
+    .ratingCard {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .ratingCard > p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 1em;
+    }
+    #ratingList {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      max-height: 300px;
+      display: grid;
+      grid-template-rows: 33% 33% 33%;
+      grid-template-columns: 15px 15px auto 15px 15px;
+    }
+
+    #clientList {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      max-height: 300px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 15px 15px auto 15px 15px;
+    }
+    /*For card positioning within grid for ratings and clients*/
+    #ratingList {
+      margin: 30px 0px 30px auto;
+    }
+    .ratingCard {
+      min-height: 2em;
+    }
+    #ratingNo1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    #ratingNo2 {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    #ratingNo3 {
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .clientCard {
+      margin: 0 10px 0 10px;
+    }
+    #cardNo1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+    #cardNo2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 5;
+    }
+    #cardNo3 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 6;
+    }
+  }
+
